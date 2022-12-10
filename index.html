@@ -5,72 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,300;1,200&display=swap');
-
-        body {
-            background-color: rgb(129, 129, 129);
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        main {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300px;
-            height: 480px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.308);
-            background-image: linear-gradient(to top,rgba(32, 32, 32, 0.945),rgba(17, 17, 17, 0.911), rgba(15, 15, 15, 0.911));
-            transform: translate(-50%, -50%);
-        }
-
-        table {
-            position: absolute;
-            top: 20%;
-            font-size: 2em;
-            padding: 10px;
-            margin-top: 10px;
-        }
-
-        td {
-            color: rgb(255, 255, 255);
-            padding: 20px;
-            text-align: center;
-            width: 30px;
-            height: 20px;
-            font-size: 25px;
-            border-radius: 20px;
-        }
-
-        td:hover {
-            background-color:#ffffff;
-            color: rgb(0, 0, 0);
-            transform: translateY(-5px);
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.226);
-            transition: background-color 0.1s, transform 0.3s;
-            transition-timing-function: ease;
-            cursor: pointer;
-        }
-        
-        td.alg:hover {
-            background-color: #F19A3A;
-        }
-
-        main > div > p {
-            color: rgb(255, 255, 255);
-            text-align: right;
-            font-size: 2.8em;
-            padding-right: 10px;
-            margin-right: 10px;
-            padding-top: 10px;
-            padding-left: 10px;
-            word-wrap: break-word;
-            margin-top: 0px;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
@@ -109,28 +44,6 @@
             </tr>
         </table>
     </main>
-    <script>
-        res = document.getElementById('res')
-        function reset() {
-            res.innerHTML =''
-        }
-        
-        function insert(num) {
-            res.innerHTML += num
-        }
-
-        function apagar() {
-            if (res.textContent) {
-                 result = document.getElementById('res').innerHTML
-                 res.innerHTML = result.substring(0, result.length -1)
-            }     
-        }
-
-        function calcular() {
-            if (res.textContent != 'Erro') {
-                document.getElementById('res').innerHTML = eval(res.innerHTML)
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
